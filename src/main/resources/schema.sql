@@ -1,0 +1,13 @@
+
+DROP TABLE IF EXISTS BOOKS cascade;
+CREATE TABLE BOOKS
+(
+    id LONG AUTO_INCREMENT NOT NULL,
+    isbn VARCHAR(40) NOT NULL,
+    name    VARCHAR(40) NOT NULL,
+    author VARCHAR(40) NOT NULL,
+    pageCount INTEGER NOT NULL,
+    weightInGrams INTEGER NOT NULL,
+    priceInKopecks INTEGER,
+    PRIMARY KEY (id)
+);
