@@ -32,15 +32,15 @@ public class AlfaBankRequestInterceptor implements ClientHttpRequestInterceptor 
         logRequestDetails(request);
 
         ClientHttpResponse response = execution.execute(request, body);
-        log.debug("Response status Alfa Bank: {}", response.getStatusCode().value());
+        log.trace("Response status Alfa Bank: {}", response.getStatusCode().value());
 
         return response;
     }
 
     private void logRequestDetails(HttpRequest request) {
 
-        log.debug("Headers: {}", request.getHeaders());
-        log.debug("Request Method: {}", request.getMethod());
-        log.debug("Request URI: {}", request.getURI());
+        log.trace("Headers: {}", request.getHeaders());
+        log.trace("Request Method: {}", request.getMethod());
+        log.trace("Request URI: {}", request.getURI());
     }
 }

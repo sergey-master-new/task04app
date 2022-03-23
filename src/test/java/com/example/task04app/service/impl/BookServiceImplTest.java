@@ -1,9 +1,9 @@
 package com.example.task04app.service.impl;
 
 import com.example.task04app.dto.BookDto;
-import com.example.task04app.entity.Book;
+import com.example.task04app.persistance.entity.Book;
 import com.example.task04app.mapper.BookMapper;
-import com.example.task04app.persistance.BookDao;
+import com.example.task04app.service.persistance.BookDao;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

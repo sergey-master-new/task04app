@@ -6,7 +6,7 @@
 
 package com.example.task04app.mapper;
 
-import com.example.task04app.entity.Book;
+import com.example.task04app.persistance.entity.Book;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 

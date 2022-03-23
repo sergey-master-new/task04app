@@ -19,7 +19,7 @@ import org.springframework.web.client.RestTemplate;
 public class RestTemplateOpenLibraryConfig {
 
     /**
-     * Rest template open library rest template.
+     * Rest template for openlibrary.org.
      *
      * @return the rest template
      */

@@ -102,7 +102,7 @@ public class BookController {
     /**
      * Delete book response entity.
      *
-     * @param id the identification number
+     * @param id the identification number of book.
      * @return the response entity with HttpStatus.OK
      */
     @DeleteMapping("/delete")

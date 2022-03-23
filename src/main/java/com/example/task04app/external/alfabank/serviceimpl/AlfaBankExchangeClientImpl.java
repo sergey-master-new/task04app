@@ -107,7 +107,7 @@ public class AlfaBankExchangeClientImpl implements AlfaBankExchangeClient {
         if (response == null || response.getRates() == null) {
 
             log.error("Exception when getting up-to-date exchange rates. Response = null");
-            throw new ExternalResponseException("Exception when getting up-to-date exchange rates.");
+            throw new ExternalResponseException("Exception when getting exchange rates.");
         }
     }
 
@@ -116,7 +116,7 @@ public class AlfaBankExchangeClientImpl implements AlfaBankExchangeClient {
         if (response == null || response.getRates() == null) {
 
             log.error("Exception when getting up-to-date exchange rates. Response = null");
-            throw new ExternalResponseException("Exception when getting up-to-date exchange rates.");
+            throw new ExternalResponseException("Exception when getting exchange rates.");
         }
     }
 }

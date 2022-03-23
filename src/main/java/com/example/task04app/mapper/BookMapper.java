@@ -7,7 +7,7 @@
 package com.example.task04app.mapper;
 
 import com.example.task04app.dto.BookDto;
-import com.example.task04app.entity.Book;
+import com.example.task04app.persistance.entity.Book;
 import org.mapstruct.InjectionStrategy;
 import org.mapstruct.IterableMapping;
 import org.mapstruct.Mapper;

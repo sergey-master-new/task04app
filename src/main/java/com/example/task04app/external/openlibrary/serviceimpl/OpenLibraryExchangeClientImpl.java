@@ -7,6 +7,7 @@
 package com.example.task04app.external.openlibrary.serviceimpl;
 
 import com.example.task04app.exception.ExternalRequestException;
+import com.example.task04app.exception.ExternalResponseException;
 import com.example.task04app.service.external.OpenLibraryExchangeClient;
 import com.example.task04app.external.openlibrary.config.OpenLibraryConfig;
 import com.example.task04app.external.openlibrary.dto.BookOpenLibraryDto;
@@ -88,6 +89,12 @@ public class OpenLibraryExchangeClientImpl implements OpenLibraryExchangeClient 
     }
 
     private List<BookOpenLibraryDto> checkOnNullFields(ResponseBookOpenLibrary response) {
+
+        if (response == null || response.getBookOpenLibraryDtoList() == null) {
+
+            log.error("Exception when getting data from openlibrary. Response = null");
+            throw new ExternalResponseException("Exception when getting data from openlibrary.");
+        }
 
         if (!response.getBookOpenLibraryDtoList().isEmpty()) {
 

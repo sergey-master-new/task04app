@@ -4,11 +4,11 @@
  * @version V 1.0.0
  */
 
-package com.example.task04app.persistance.impl;
+package com.example.task04app.persistance.serviceimpl;
 
-import com.example.task04app.entity.Book;
+import com.example.task04app.persistance.entity.Book;
 import com.example.task04app.mapper.BookRowMapper;
-import com.example.task04app.persistance.BookDao;
+import com.example.task04app.service.persistance.BookDao;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataAccessException;
@@ -83,10 +83,8 @@ public class BookJdbcTemplateDaoImpl implements BookDao {
     @Override
     public boolean delete(Long id)  throws DataAccessException {
 
-        int countOfChanges = jdbcTemplate.update(DELETE_BOOK_BY_ID_JDBC_TEMPLATE_SQL_QUERY,
+        jdbcTemplate.update(DELETE_BOOK_BY_ID_JDBC_TEMPLATE_SQL_QUERY,
                 new MapSqlParameterSource("id", id));
-
-        if (countOfChanges == 0){ return false; }
 
          return true;
     }

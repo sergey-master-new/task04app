@@ -4,7 +4,7 @@
  * @version V 1.0.0
  */
 
-package com.example.task04app.entity;
+package com.example.task04app.persistance.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

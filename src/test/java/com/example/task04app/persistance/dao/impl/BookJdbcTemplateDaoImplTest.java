@@ -1,8 +1,8 @@
 package com.example.task04app.persistance.dao.impl;
 
-import com.example.task04app.entity.Book;
+import com.example.task04app.persistance.entity.Book;
 import com.example.task04app.mapper.BookRowMapper;
-import com.example.task04app.persistance.impl.BookJdbcTemplateDaoImpl;
+import com.example.task04app.persistance.serviceimpl.BookJdbcTemplateDaoImpl;
 import com.example.task04app.persistance.query.BookSqlQuery;
 import org.junit.Assert;
 import org.junit.Ignore;
@@ -18,7 +18,6 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.support.KeyHolder;
 
-import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;

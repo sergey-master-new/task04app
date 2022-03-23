@@ -1,21 +1,21 @@
 /*
  * @author S.Maevsky
- * @since 04.03.2022, 16:19
+ * @since 04.03.2022, 16:17
  * @version V 1.0.0
  */
 
-package com.example.task04app.persistance;
+package com.example.task04app.service.persistance;
 
+import com.example.task04app.persistance.entity.Book;
 import org.springframework.dao.DataAccessException;
 
 import java.util.List;
 
+
 /**
- * The interface Dao.
- *
- * @param <E> the type parameter
+ * The interface Book dao.
  */
-public interface Dao<E>{
+public interface BookDao {
 
     /**
      * Gets all.
@@ -23,7 +23,7 @@ public interface Dao<E>{
      * @return the all
      * @throws DataAccessException the data access exception
      */
-    List<E> getAll() throws DataAccessException;
+    List<Book> getAll() throws DataAccessException;
 
     /**
      * Gets by id.
@@ -32,7 +32,7 @@ public interface Dao<E>{
      * @return the by id
      * @throws DataAccessException the data access exception
      */
-    E getById (Long id) throws DataAccessException;
+    Book getById (Long id) throws DataAccessException;
 
     /**
      * Save e.
@@ -41,7 +41,7 @@ public interface Dao<E>{
      * @return the e
      * @throws DataAccessException the data access exception
      */
-    E save(E entity) throws DataAccessException;
+    Book save(Book entity) throws DataAccessException;
 
     /**
      * Update e.
@@ -50,7 +50,7 @@ public interface Dao<E>{
      * @return the e
      * @throws DataAccessException the data access exception
      */
-    E update(E entity) throws DataAccessException;
+    Book update(Book entity) throws DataAccessException;
 
     /**
      * Delete boolean.
@@ -60,4 +60,23 @@ public interface Dao<E>{
      * @throws DataAccessException the data access exception
      */
     boolean delete(Long id) throws DataAccessException;
+
+    /**
+     * Gets list of books by author.
+     *
+     * @param author the author
+     * @return the by author
+     * @throws DataAccessException the data access exception
+     */
+    List<Book> getByAuthor(String author) throws DataAccessException;
+
+    /**
+     * Gets list of books by title.
+     *
+     * @param title the title
+     * @return the by title
+     * @throws DataAccessException the data access exception
+     */
+    List<Book> getByTitle(String title) throws DataAccessException;
+
 }
