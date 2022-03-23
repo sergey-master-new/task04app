@@ -67,7 +67,7 @@ public class OpenLibraryExchangeClientImpl implements OpenLibraryExchangeClient 
 
         } catch (Exception ex) {
 
-            log.debug("Exception when handling get books from OpenLibrary by author: {}", author);
+            log.error("Exception when handling get books from OpenLibrary by author: {}", author);
             throw new ExternalRequestException("Exception when handling get books from OpenLibrary. " +
                     "Please try again later.");
         }
